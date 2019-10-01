@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+  padding: 1em;
+}
+
+.logo {
+  width: 300px;
+  margin: 0 auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
+
+.photo-size {
+  width: 80%;
+  height: 40%;
+  video {
+    width: 80%;
+  }
+}
+
+.snapshot {
+  text-align: center;
+  img {
+    max-width: 800px;
+    max-height: 800px;
+  }
+}
+
+.video-wrapper {
+  video {
+    width: 100%;
+  }
+}
+
+button {
+  margin: 5% auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}

@@ -1,0 +1,26 @@
+.container {
+  text-align: center;
+  padding: 1em;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
+
+button {
+  margin: 5% auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+  .example-margin {
+    margin-top: 5%;
+  }
+}

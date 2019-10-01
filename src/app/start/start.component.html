@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-card fxLayout="column">
+    <mat-card-title>ÉTAPE 2</mat-card-title>
+    <mat-card-subtitle> Rendez vous à la mare</mat-card-subtitle>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker1" placeholder="Date de saisie" [formControl]="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-card-content fxLayout="column">
+      <div>
+        <img class="logo" src="assets/marcheur.gif" alt="angular logo" />
+      </div>
+      <div>
+        <button mat-raised-button routerLink="/take-picture">J'y suis</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

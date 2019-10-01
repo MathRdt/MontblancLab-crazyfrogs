@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+  padding: 1em;
+}
+
+.logo {
+  max-width: 280px;
+  margin: 5% auto;
+}
+
+button {
+  margin: 5% auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}
+
+.center-text {
+  align-self: center;
+}
+
+mat-card {
+  margin: 5% auto;
+}

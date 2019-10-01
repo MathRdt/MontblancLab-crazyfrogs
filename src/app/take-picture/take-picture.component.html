@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-card>
+    <h1>
+      <mat-card-title translate>ÉTAPE 3</mat-card-title>
+      <mat-card-subtitle translate>Prenez une photo de la mare</mat-card-subtitle>
+    </h1>
+    <mat-card-content fxFlex fxLayout="column">
+      <div>
+        <p>Exemple:</p>
+        <img class="logo" src="assets/mare.jpg" alt="angular logo" />
+      </div>
+      <div *ngIf="!webcamImage" fxFlex="auto">
+        <webcam
+          [height]="280"
+          [width]="300"
+          [trigger]="triggerObservable"
+          (imageCapture)="handleImage($event)"
+          *ngIf="showWebcam"
+          [allowCameraSwitch]="allowCameraSwitch"
+          [switchCamera]="nextWebcamObservable"
+          [videoOptions]="videoOptions"
+          [imageQuality]="1"
+          (cameraSwitched)="cameraWasSwitched($event)"
+          (initError)="handleInitError($event)"
+        >
+        </webcam>
+      </div>
+      <div *ngIf="webcamImage" fxLayout="column">
+        <h2>Nice one!</h2>
+        <img class="logo" [src]="webcamImage.imageAsDataUrl" />
+      </div>
+      <div class="flex-row" *ngIf="!webcamImage">
+        <button mat-raised-button (click)="triggerSnapshot()">Prendre la photo</button>
+        <button mat-raised-button (click)="toggleWebcam()">changer de caméra</button>
+      </div>
+      <div *ngIf="webcamImage" class="flex-row">
+        <button mat-raised-button (click)="resetWebcamImage()">Reprendre la photo</button>
+        <button mat-raised-button routerLink="/observation-water">Valider la photo</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
